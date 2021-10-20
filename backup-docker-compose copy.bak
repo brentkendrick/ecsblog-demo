@@ -1,0 +1,13 @@
+services:
+  frontend:
+    platform: linux/amd64
+    image: brentkend/starter-front
+    build: frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+  backend:
+    platform: linux/amd64
+    image: brentkend/starter-back
+    build: backend

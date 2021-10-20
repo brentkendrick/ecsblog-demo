@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: 979711578039.dkr.ecr.us-east-2.amazonaws.com/starter-front:latest
+    build: frontend
+    ports:
+      - 80:80
+    depends_on:
+      - backend
+  backend:
+    image: 979711578039.dkr.ecr.us-east-2.amazonaws.com/starter-back:latest
+    build: backend
